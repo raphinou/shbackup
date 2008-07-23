@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export server=SERVERNAME
+export scripts_dir=/usr/local/shbackup
+export date=$(date +%Y%m%d)
+export backup_base=/data/backup
+export backup_dir=/data/backup/$date
+export s3_bucket=rbbackups
+export s3_prefix="/$server"
+export postgresql_dir=/usr/local/pgsql
+

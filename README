@@ -1,0 +1,35 @@
+shbackup
+--------
+
+Here are simple shell scripts I use for some simple backup needs. Put on github
+for my own convenience.
+
+
+* Getting it and configuring it
+-------------------------------
+# clone it from github
+cd /usr/local
+git clone  git://github.com/raphinou/shbackup.git
+cd shbackup
+# copy sample files to final destination
+cp backup_vars.sh.sample backup_vars.sh
+cp backup.sh.sample backup.sh
+# edit backup_vars to set server name
+vi backup_vars.sh
+# edit backup.sh to only call needed scripts
+vi backup.sh
+# edit archive_file.sh to determine which directories/files are to be backed up
+vi archivefiles.sh
+
+* Usage 
+-------
+Variables are defined in backup_vars.sh. Note that this file is sourced by each
+script. So if you start your backup at 23:59, it is possible that scripts in
+the same run have a different value of the date.... By default backups are
+created in a subdirectory of /data/backup named according to the date.
+
+Let the script backup.sh calls other scripts according to your need.
+
+
+
+Raphaël

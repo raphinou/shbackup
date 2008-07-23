@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. ./backup_vars.sh
+$scripts_dir/cleanup.sh
+$scripts_dir/dumpmysql.sh
+$scripts_dir/dumppostgresql.sh
+$scripts_dir/list-debian-packages.sh
+$scripts_dir/list-gems.sh
+$scripts_dir/archivefiles.sh
+$scripts_dir/collect.sh
+$scripts_dir/send.sh
+
