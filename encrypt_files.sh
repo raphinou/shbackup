@@ -19,12 +19,12 @@ if [[ -d $arg ]]; then
                 [[ ! -f $f ]] && continue
                 echo "encrypting $f"
                 openssl des3 -e -in $f -out $f.enc -a -salt -kfile $scripts_dir/pass
-                rm $f
+		if [ $? == 0 ]; then rm $f; fi
         done
 elif [[ -f $arg ]]; then
         echo "encrypting file $arg"
         [[ -f $arg ]] && openssl des3 -e -in $arg -out $arg.enc -a -salt -kfile $scripts_dir/pass
-        rm $arg
+        if [ $? == 0 ]; then rm $arg; fi
 
 fi
 
