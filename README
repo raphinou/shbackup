@@ -20,6 +20,8 @@ vi backup_vars.sh
 vi backup.sh
 # edit archive_file.sh to determine which directories/files are to be backed up
 vi archivefiles.sh
+# add an entry in /etc/crontab like this one:
+  32 23   * * *   root    cd /usr/local/shbackup/ && ./backup.sh  2>&1 1>/dev/null | grep -v "tar: Removing leading \`/' from member names"
 
 * Usage 
 -------
