@@ -17,6 +17,6 @@ for vserver in $vservers; do
 
         # save the postgresql dump seperately, easier to catch errors
         database_dump=$(find /etc/vservers/${vserver}/vdir/data/backup -maxdepth 3 -type f -name postgresql_databases.sql)
-        [[ -n $database_dump ]] &&  gzip -c $database_dump > $backup_base/${vserver}_mysql_databases_${date}.sql.gz
+        [[ -n $database_dump ]] &&  gzip -c $database_dump > $backup_base/${vserver}_postgresql_databases_${date}.sql.gz
 
 done
