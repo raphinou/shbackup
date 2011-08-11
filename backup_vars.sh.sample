@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# notification mails sent to this address
+export admin_email=admin@domain.com
 export server=SERVERNAME
 export scripts_dir=/usr/local/shbackup
 export date=$(date +%Y%m%d)
