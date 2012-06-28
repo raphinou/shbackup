@@ -23,6 +23,10 @@ vi archivefiles.sh
 # add an entry in /etc/crontab like this one:
   32 23   * * *   root    cd /usr/local/shbackup/ && ./backup.sh  2>&1 1>/dev/null | grep -v "tar: Removing leading \`/' from member names"
 
+# if you want to upload archives to an FTP server and S3, you should 
+# set the ftp password in the file ftppass and chmod 400 it, and install and configure s3cmd
+
+
 * Usage 
 -------
 Variables are defined in backup_vars.sh. Note that this file is sourced by each

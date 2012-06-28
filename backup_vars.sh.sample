@@ -10,4 +10,6 @@ export backup_dir=/data/backup/$date
 export s3_bucket=rbbackups
 export s3_prefix="/$server"
 export postgresql_dir=/usr/local/pgsql
-
+export ftp_user=
+export ftp_pass=$(cat ./ftp_pass)
+export ftp_host=
